@@ -112,7 +112,7 @@ void vel_step(int N, float* u, float* v, float* w, float* u0, float* v0, float* 
 	SWAP(w0, w); diffuse(N, 2, w, w0, visc, dt);
 	project(N, u, v, w, u0, v0);
 	SWAP(u0, u); SWAP(v0, v); SWAP(w0, w);
-	advect(N, 1, u, u0, u0, v0, w0, dt); advect(N, 2, v, v0, u0, v0, w0,dt); advect(N, 2, w, v0, u0, v0, w0, dt);
+	advect(N, 1, u, u0, u0, v0, w0, dt); advect(N, 2, v, v0, u0, v0, w0,dt); advect(N, 3, w, v0, u0, v0, w0, dt);
 	project(N, u, v,w, u0, v0);
 }
 
